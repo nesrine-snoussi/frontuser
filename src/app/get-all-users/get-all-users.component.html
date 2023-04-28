@@ -1,0 +1,57 @@
+<div class="page-wrapper">
+  <div class="content">
+      <div class="page-header">
+          <div class="row">
+              <div class="col-sm-12">
+                  <ul class="breadcrumb">
+                      <li class="breadcrumb-item"><a routerLink="/allUser">Students </a></li>
+                      <li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
+                      <li class="breadcrumb-item active">All Students</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+<div class="container mt-3">
+  <div class="card mt-3" style="background-color: beige; color: #b30000; text-align: center;">
+    <h3>All Users List</h3>
+  </div>
+  <div class="card mt-3" style="background-color: #b30000; color: beige; text-align: center;">
+    <table class="table">
+      <thead>
+        <tr style="color: beige;">
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email Address</th>
+          <th>Country</th>
+          <th>City</th>
+          <th>User Name</th>
+          <th>Nationality</th>
+          <th>Gender</th>
+          <th>Operations</th>
+          <th></th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users" style="background-color: #b30000; color: beige; text-align: center;">
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.email_Address }}</td>
+          <td>{{ user.country }}</td>
+          <td>{{ user.city }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.Nationality }}</td>
+          <td>{{ user.gender }}</td>
+
+          <td><button type="button" class="btn btn-outline-light" onclick="editUser(user.id)"
+              routerLink="/updateUser">Edit</button>
+          </td>
+          <td> <button type="button" class="btn btn-outline-light" routerLink="/deleteUser"> Delete </button>
+
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+</div>
+</div>

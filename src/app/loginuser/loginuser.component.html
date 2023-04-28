@@ -1,0 +1,27 @@
+<div class="page-wrapper">
+  <div class="content">
+      <div class="page-header">
+          <div class="row">
+              <div class="col-sm-12">
+                  <ul class="breadcrumb">
+                      <li class="breadcrumb-item"><a routerLink="/allUser">Students </a></li>
+                      <li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
+                      <li class="breadcrumb-item active">Add Students</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      
+      <h2>Login</h2>
+      <form (ngSubmit)="onSubmit(username.value, password.value)">
+        <div>
+          <label>Username:</label>
+          <input type="text" name="username" required #username>
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" name="password" required #password>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      

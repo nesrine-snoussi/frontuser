@@ -1,0 +1,313 @@
+<div class="page-wrapper">
+    <div class="content">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/allUser">Students </a></li>
+                        <li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
+                        <li class="breadcrumb-item active">Add Students</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form (ngSubmit)="saveUser()">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-heading">
+                                        <h4>Student Details</h4>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label>First Name <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" placeholder="" id="firstname"
+                                            [(ngModel)]="user.firstName" name="firstname">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label>Last Name <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" placeholder="" id="lastname"
+                                            [(ngModel)]="user.lastName" name="lastname">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label>User Name <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" placeholder="" id="username"
+                                            [(ngModel)]="user.username" name="username">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label>Mobile <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" placeholder="" id="phone"
+                                            [(ngModel)]="user.phone" name="phone">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label>Email <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="email" placeholder="" id="email_Address"
+                                            [(ngModel)]="user.email_Address" name="email_Address">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label>Password <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="password" placeholder="" id="password"
+                                            [(ngModel)]="user.password" name="password">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label>Confirm Password <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="password" placeholder=""
+                                            id="confirme_password" [(ngModel)]="user.confirmPassword"
+                                            name="confirmepassword">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group select-gender">
+                                        <label class="gen-label">Gender<span class="login-danger">*</span></label>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="radio" name="gender" class="form-check-input"> Male
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="radio" name="gender" class="form-check-input">Female
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label>Education <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label>Designation <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label>Department <span class="login-danger">*</span></label>
+                                        <select class="form-control select">
+                                            <option>Select Department</option>
+                                            <option>Orthopedics</option>
+                                            <option>Radiology</option>
+                                            <option>Dentist</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-group local-forms">
+                                        <label>Address <span class="login-danger">*</span></label>
+                                        <textarea class="form-control" rows="3" cols="30"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-3">
+                                    <div class="form-group local-forms">
+                                        <label>City <span class="login-danger">*</span></label>
+                                        <select class="form-control select">
+                                            <option>Select City</option>
+                                            <option>Alaska</option>
+                                            <option>Los Angeles</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-3">
+                                    <div class="form-group local-forms">
+                                        <label>Country <span class="login-danger">*</span></label>
+                                        <select class="form-control select">
+                                            <option>Select Country </option>
+                                            <option>Usa</option>
+                                            <option>Uk</option>
+                                            <option>Italy</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-3">
+                                    <div class="form-group local-forms">
+                                        <label>State/Province <span class="login-danger">*</span></label>
+                                        <select class="form-control select">
+                                            <option>Select State</option>
+                                            <option>Alaska</option>
+                                            <option>California</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-group local-forms">
+                                        <label>Description <span class="login-danger">*</span></label>
+                                        <textarea class="form-control" rows="3" cols="30"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="doctor-submit text-end">
+                                        <button value="Submit" (click)=onSubmit() type="submit"
+                                            class="btn btn-primary submit-form me-2">Submit</button>
+                                        <button type="reset" class="btn btn-primary cancel-form">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<form (ngSubmit)="saveUser()">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-heading">
+                                        <h4>Student Details</h4>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+
+
+                                    <div class="form-group local-forms">
+                                        <label>First Name <span class="login-danger">*</span></label>
+                                        <input type="text" class="form-control" id="firstname"
+                                            [(ngModel)]="user.firstName" name="firstname">
+
+                                    </div>
+
+                                    <div class="form-group local-forms">
+                                        <label>Last Name <span class="login-danger">*</span> </label>
+                                        <input type="text" class="form-control" id="lastname"
+                                            [(ngModel)]="user.lastName" name="lastname" >
+
+
+                                    </div>
+
+                                    <div class="from-group">
+                                        <label for="gender" class="form-control mb-3">Gender</label>
+                                        <div> <select class="form-select form-select-lg mb-3"
+                                                aria-label=".form-select-lg example" name="gender" id="gender">
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="from-group">
+                                        <label>Nationality</label>
+                                        <input type="text" class="form-control" id="nationality"
+                                            [(ngModel)]="user.Nationality" name="nationality" class="form-control mb-3">
+
+
+                                    </div>
+                                </div>
+                                <div class="card mt-3" style="padding: 20px;">
+                                    <div class="card-header"
+                                        style="background-color: #b30000; color: beige; font-weight: bold;">
+                                        University Informations
+                                    </div>
+
+                                    <div class="from-group">
+                                        <label for="universities" class="form-control mb-3">University</label>
+                                        <div> <select class="form-select form-select-lg mb-3"
+                                                aria-label=".form-select-lg example" name="universities" id="universty">
+                                                <option value="Esprit Tic">Esprit Tic</option>
+                                                <option value="ESB">Esprit School of Business</option>
+                                                <option value="Esprit GC">Esprit GC</option>
+                                            </select>
+                                        </div>
+
+
+
+
+                                    </div>
+                                    <div class="from-group">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control" id="email"
+                                            [(ngModel)]="user.email_Address" name="email" class="form-control mb-3">
+
+
+                                    </div>
+
+
+                                    <div class="from-group">
+                                        <label>Country</label>
+                                        <input type="text" class="form-control" id="country" [(ngModel)]="user.country"
+                                            name="country" class="form-control mb-3">
+
+
+                                    </div>
+                                    <div class="from-group">
+                                        <label>City</label>
+                                        <input type="text" class="form-control" id="city" [(ngModel)]="user.city"
+                                            name="city" class="form-control mb-3">
+
+
+                                    </div>
+                                </div>
+
+                                <div class="card mt-3" style="padding: 20px;">
+                                    <div class="card-header"
+                                        style="background-color: #b30000; color: beige; font-weight: bold;">
+                                        Login Informations
+                                    </div>
+
+                                    <div class="from-group">
+                                        <label>Username</label>
+                                        <input type="text" class="form-control" id="username"
+                                            [(ngModel)]="user.username" name="username" class="form-control mb-3">
+
+
+                                    </div>
+                                    <div class="from-group">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" id="password"
+                                            [(ngModel)]="user.password" name="password" class="form-control mb-3">
+
+
+                                    </div>
+
+                                    <div class="from-group mt-3">
+                                        <label>Confirme your password</label>
+                                        <input type="password" class="form-control" id="country"
+                                            [(ngModel)]="user.confirmPassword" name="confirmepassword"
+                                            class="form-control mb-3">
+
+
+                                    </div>
+                                </div>
+
+                                <div>
+
+
+
+                                    <input type="submit" value="Submit" (click)=onSubmit()
+                                        class="btn btn-primary btn-block"
+                                        style="background-color:  #b30000; color:beige">
+
+                                    <input type="reset" value="Cancel" class="btn btn-primary btn-block"
+                                        style="background-color:  beige; color:black">
+
+
+                                </div>
+
+                            </div>
+                        </form>-->
